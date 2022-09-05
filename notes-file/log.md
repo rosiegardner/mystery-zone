@@ -29,6 +29,12 @@
 #### Monday, Sept 5th, 2022 (9/5/22)
 
 * 1:00: Create new VScode - file setup
+* 2:00: Add files - start building skeletion for components
+* 2:30: Setup Firebase/store - Storage
+* 2:50: Create UploadForm component for file upload
+* 3:10: Firebase storage custom hook
+* 4:20: Create progress bar component for file
+* 4:50: > finished for the day <
 
-# Hours Worked: 6hr & 50min
+# Hours Worked: 10hr & 40min
 
