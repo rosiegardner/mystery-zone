@@ -36,5 +36,10 @@
 * 4:20: Create progress bar component for file
 * 4:50: > finished for the day <
 
-# Hours Worked: 10hr & 40min
+#### Wednesday, Sept 6th, 2022 (9/6/22)
+
+* 7:00: Implement Timestamp - Bugfix with Instructor Christy
+* 8:00: Finished for the day 
+
+# Hours Worked: 11hr & 40min
 
