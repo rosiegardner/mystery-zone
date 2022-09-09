@@ -1,25 +1,31 @@
 import { useState, useEffect } from 'react';
 import { db } from '../firebase.js';
 // import { collection, addDoc } from 'firebase/firestore';
-// import { collection, addDoc, doc, updateDoc, onSnapshot, deleteDoc, query, orderBy } from "firebase/firestore";
+import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 
-const useFirestore = (collection) => {
+const useFirestore = () => {
   const [docs, setDocs] = useState([]);
 
   useEffect (() => {
-    const unSubscribe = db.collection(collection)
-      .orderBy('createdAt', 'desc')
-      .onSnapshot((snap) => {
+    const queryByTimestamp = query(
+      collection(db, "images"),
+      orderBy('createdAt', 'desc')
+    );
+
+    const unSubscribe = onSnapshot(
+      queryByTimestamp,
+      (querySnapshot) => {
         let documents = [];
-        snap.forEach(doc => {
+        querySnapshot.forEach((doc) => {
           documents.push({...doc.data(), id: doc.id})
         });
         setDocs(documents);
       });
 
-    return () => unSubscribe();
+      return () => unSubscribe();
+    
 
-  }, [collection])
+  }, [])
 
   return { docs };
 }
@@ -28,7 +34,7 @@ export default useFirestore;
 
 
   // ** Possible Updated code for R.V18 ** 
-  
+
     // const queryByTimestamp = query(
     //   collection(db, "images"),
     //   orderBy('createdAt', 'desc')
@@ -46,3 +52,25 @@ export default useFirestore;
 
     //   return () => unSubscribe();
     // )
+
+  // ** Old CODE **
+    // const useFirestore = (collection) => {
+    //   const [docs, setDocs] = useState([]);
+    
+    //   useEffect (() => {
+    //     const unSubscribe = db.collection(collection)
+    //       .orderBy('createdAt', 'desc')
+    //       .onSnapshot((snap) => {
+    //         let documents = [];
+    //         snap.forEach(doc => {
+    //           documents.push({...doc.data(), id: doc.id})
+    //         });
+    //         setDocs(documents);
+    //       });
+    
+    //     return () => unSubscribe();
+    
+    //   }, [collection])
+    
+    //   return { docs };
+    // }
