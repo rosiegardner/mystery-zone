@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { db } from '../firebase.js';
-// import { collection, addDoc } from 'firebase/firestore';
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 
 const useFirestore = () => {
@@ -32,26 +31,6 @@ const useFirestore = () => {
 
 export default useFirestore;
 
-
-  // ** Possible Updated code for R.V18 ** 
-
-    // const queryByTimestamp = query(
-    //   collection(db, "images"),
-    //   orderBy('createdAt', 'desc')
-    // );
-
-    // const unSubscribe = onSnapshot(
-    //   queryByTimestamp,
-    //   (querySnapshot) => {
-    //     let documents = [];
-    //     querySnapshot.forEach((doc) => {
-    //       documents.push({...doc.data(), id: doc.id})
-    //     });
-    //     setDocs(documents);
-    //   });
-
-    //   return () => unSubscribe();
-    // )
 
   // ** Old CODE **
     // const useFirestore = (collection) => {
