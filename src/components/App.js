@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import UploadForm from "./UploadForm";
 import ImageGrid from "./ImageGrid";
+import Modal from "./Modal";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <UploadForm />
       <ImageGrid />
+      <Modal />
     </div>
   );
 }
