@@ -7,24 +7,28 @@
 
 ### Technologies Used
 
-* Youtube Tutorials
-* VScode
+* React
+* JavaScript
+* HTML/CSS
+* Firebase / Firestore
+* Git
 
 
 ### Setup/Installation Requirements
 
 * Clone or download this repository onto your desktop.
-* `https://github.com/rosiegardner/capstone.git`
+* `https://github.com/rosiegardner/mystery-zone.git`
 * Navigate to top-level of directory.
-* Open VScode or Text Editor of your choosing.
-* Read `README.MD`
-* Read `capstone-proposal.md` 
+* Open VScode or Text Editor of your choosing. 
 * Read `log.md`
+* In terminal run:
+* `npm install`
+* `npm run start`
 
 
 ### Known Bugs
 
-* NO KNOWN BUGS
+* Firebase / Storage is uploading selected files multiple times.
 
 ### Contact
 
@@ -34,4 +38,4 @@
 
 MIT
 
-Copyright (c) Aug. 2022 
+Copyright (c) Sept. 2022 
