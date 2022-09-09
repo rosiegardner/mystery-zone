@@ -3,7 +3,7 @@
 #### By: Rosie Gardner
 
 ## Description
- This repository serves as a Research and Planning log with a capstone propsoal for final project at Epicodus.
+This application allows users to upload png or jpeg files from personal device. Serving as a Research and Planning log with a capstone propsoal for final project at Epicodus.
 
 ### Technologies Used
 
