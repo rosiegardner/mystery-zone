@@ -1,4 +1,6 @@
 ### Research & Planning Log
+## Total Hours Worked: 13hr & 50min ( 8/25/22 - 09/09/22 )
+
 #### Thursday, August 25th 2022 (08\25\22)
 
 * 10:25: prioritize to-dos
@@ -13,6 +15,8 @@
 * 3:10: Continue building along with youtube tutorial.
 * 4:25: Pushed up to github - finish tutorial tomorrow 8/26
 
+# Hours: 5hrs & 30min 
+
 #### Friday, August 26th, 2022 (08/26/22)
 
 * 11:40: Continue building along with youtube tutorial
@@ -26,6 +30,8 @@
 
 * `https://github.com/rosiegardner/firebase-practice.git`
 
+# Hours: 1hr & 10min
+
 #### Monday, Sept 5th, 2022 (9/5/22)
 
 * 1:00: Create new VScode - file setup
@@ -34,12 +40,26 @@
 * 2:50: Create UploadForm component for file upload
 * 3:10: Firebase storage custom hook
 * 4:20: Create progress bar component for file
-* 4:50: > finished for the day <
+* 4:50: < finished for the day >
+
+# Hours: 3hrs & 50min
 
 #### Wednesday, Sept 6th, 2022 (9/6/22)
 
 * 7:00: Implement Timestamp - Bugfix with Instructor Christy
 * 8:00: Finished for the day 
 
-# Hours Worked: 11hr & 40min
+# Hours: 1hr
+
+#### Friday, Sept 9th, 2022 (9/9/2022)
+
+* 10:20: Create ImageGrid.js Component
+* 11:00: Create useFirestore.js custom hook for database - rewrite code(?)
+* 11:22: Successfully rewrote updated code - Incredibly excited!!
+* 11:40: Create Modal Component
+* 12:00: < lunch break >
+* 12:30: Continue with Modal component for selectedImage
+* 1:00: -Bug in Firebase, Uploads images 7 times. < head explodes >
+
+# Hours: 2hrs & 10min
 
