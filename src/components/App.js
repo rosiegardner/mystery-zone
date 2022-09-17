@@ -6,7 +6,8 @@ import Modal from "./Modal";
 
 function App() {
   const [selectedImage, setSelectedImage] = useState(null);
-
+  // console.log('fucking why');
+  
   return (
     <div className="App">
       <Header />

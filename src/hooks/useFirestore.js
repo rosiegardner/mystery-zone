@@ -31,7 +31,6 @@ const useFirestore = () => {
 
 export default useFirestore;
 
-
   // ** Old CODE **
     // const useFirestore = (collection) => {
     //   const [docs, setDocs] = useState([]);

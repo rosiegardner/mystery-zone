@@ -3,7 +3,7 @@ import useFirestore from '../hooks/useFirestore';
 
 const ImageGrid = ({ setSelectedImage }) => {
   const { docs } = useFirestore('images');
-  
+  // console.log('eric crying');
 
   return (
     <div className="img-grid">

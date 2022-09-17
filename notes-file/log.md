@@ -28,9 +28,9 @@
 
 * `https://github.com/rosiegardner/firebase-practice.git`
 
-#### September 2022 (09/05, 09/06, 09/09): 7 hours
+#### September 2022 (09/05, 09/06, 09/09, 09/16): 7 hours
 
-# Monday
+# Monday 9/5
 * 1:00: Create new VScode - file setup
 * 2:00: Add files - start building skeletion for components
 * 2:30: Setup Firebase/store - Storage
@@ -39,11 +39,11 @@
 * 4:20: Create progress bar component for file
 * 4:50: < finished for the day >
 
-# Wednesday
+# Wednesday 9/6
 * 7:00: Implement Timestamp - Bugfix with Instructor Christy
 * 8:00: Finished for the day 
 
-# Friday
+# Friday 9/9
 * 10:20: Create ImageGrid.js Component
 * 11:00: Create useFirestore.js custom hook for database - rewrite code(?)
 * 11:22: Successfully rewrote updated code - Incredibly excited!!
@@ -52,4 +52,10 @@
 * 12:30: Continue with Modal component for selectedImage
 * 1:00: -Bug in Firebase, Uploads images 7 times. < head explodes >
 
+# Friday 9/16
+* 2:55: < Research for BUGFIX in Firebase >
+* 5:30: Stop useEffect Hook re-render multiple times tutorial 
+`https://www.youtube.com/watch?v=KzH6YxW0zW4`
+`https://www.youtube.com/watch?v=81faZzp18NM`
+* 6:40: < Further exploration needed >
 

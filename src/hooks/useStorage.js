@@ -27,8 +27,9 @@ const useStorage = (file) => {
         const createdAt = serverTimestamp();
         addDoc(collectionRef, { url, createdAt });
         setUrl(url);
-       // console.log('ran')
+       console.log('ran')
       });
+      
     }, [file]); 
 
   })
