@@ -1,5 +1,5 @@
 ### Research & Planning Log
-## Total Hours Worked: 13hr & 50min ( 8/25/22 - 09/09/22 )
+## Total Hours Worked: 17hr & 50min ( 8/25/22 - 09/18/22 )
 
 #### August 2022 (08/25 - 08/26): 6hr & 40min
 
@@ -28,7 +28,7 @@
 
 * `https://github.com/rosiegardner/firebase-practice.git`
 
-#### September 2022 (09/05, 09/06, 09/09, 09/16): 7 hours
+#### September 2022 (09/05 - 09/18): 11 hours
 
 # Monday 9/5
 * 1:00: Create new VScode - file setup
@@ -58,4 +58,9 @@
 `https://www.youtube.com/watch?v=KzH6YxW0zW4`
 `https://www.youtube.com/watch?v=81faZzp18NM`
 * 6:40: < Further exploration needed >
+
+# Sunday 9/18
+* 5:00: 
+      < FIXED BUG IN USE STORAGE FINALLY >
+* 5:15:      
 
