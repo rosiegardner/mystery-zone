@@ -29,12 +29,13 @@ const useStorage = (file) => {
         setUrl(url);
        console.log('ran')
       });
-      
-    }, [file]); 
+    })
 
-  })
+  }, [file]);
+
   return { progress, url, error }
 }
+
 
 export default useStorage;
 
