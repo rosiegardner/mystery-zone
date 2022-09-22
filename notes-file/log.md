@@ -62,5 +62,10 @@
 # Sunday 9/18
 * 5:00: 
       < FIXED BUG IN USE STORAGE FINALLY >
-* 5:15:      
+* 5:15:    
+
+# Thursday 9/22
+* 4:00: Watch tutorial "Subcollections in Firebase/Firestore v9 with React.js"
+`https://www.youtube.com/watch?v=gm-bggVJb5k`
+* 4:30: create new branch to albums"
 

@@ -17,6 +17,8 @@
 
 * Using the var() is a CSS variable used for styling in React
 
+## Index.js 
+* removed < React.Strictmode >, makes upload form render twice
 
 
 ## useStorage.js 
