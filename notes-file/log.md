@@ -1,5 +1,5 @@
 ### Research & Planning Log
-## Total Hours Worked: 17hr & 50min ( 8/25/22 - 09/18/22 )
+## Total Hours Worked: 18hr & 50min ( 8/25/22 - 09/22/22 )
 
 #### August 2022 (08/25 - 08/26): 6hr & 40min
 
@@ -68,4 +68,5 @@
 * 4:00: Watch tutorial "Subcollections in Firebase/Firestore v9 with React.js"
 `https://www.youtube.com/watch?v=gm-bggVJb5k`
 * 4:30: create new branch to albums"
+* 5:00: < further exploration needed >
 
