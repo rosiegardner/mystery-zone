@@ -1,7 +1,7 @@
 import React from 'react';
 import NewAlbumForm from './NewAlbumForm';
 import AlbumList from './AlbumList';
-import { toHaveStyle } from '@testing-library/jest-dom/dist/matchers';
+import AlbumDetail from './AlbumDetail';
 
 class AlbumControl extends React.Component {
 
@@ -9,7 +9,8 @@ class AlbumControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      mainAlbumList: []
+      mainAlbumList: [],
+      selectedAlbum: null
     };
   }
 
@@ -28,20 +29,34 @@ class AlbumControl extends React.Component {
     });
   }
 
+  handleChangingSelectedAlbum = (id) => {
+    const selectedAlbum = this.state.mainAlbumList
+      .filter(album => album.id === id)[0];
+    this.setState({
+      selectedAlbum: selectedAlbum
+    });
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
     
-    if(this.state.formVisibleOnPage) {
+    if (this.state.selectedAlbum != null) {
+      currentlyVisibleState =
+      <AlbumDetail 
+        album = {this.state.selectedAlbum} />
+        buttonText = "Return to Album List";
+    } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = 
-        <NewAlbumForm 
-          newAlbum={this.handleAddingNewAlbumToList} />;
-        buttonText = "Return to Album List"
+      <NewAlbumForm 
+        newAlbum = {this.handleAddingNewAlbumToList} />;
+      buttonText = "Return to Album List"
     } else {
       currentlyVisibleState = 
-        <AlbumList 
-          albumList={this.state.mainAlbumList} />
-        buttonText = "Add Album"
+      <AlbumList 
+        albumList = {this.state.mainAlbumList}
+        albumSelected = {this.handleChangingSelectedAlbum} />;
+      buttonText = "Add Album"
     }
 
     return (
