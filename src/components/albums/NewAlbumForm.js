@@ -1,25 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
 function NewAlbumForm(props){
 
   function handleNewAlbumForm(event) {
     event.preventDefault();
-    console.log(event.target.type.value);
-    console.log(event.target.name.value);
-    console.log(event.target.issue.value);
-  };
+    props.newAlbum({
+      title: event.target.title.value,
+      id: v4()
+    });
+    console.log('ran');
+  }
   
   return (
     <React.Fragment>
       <form onSubmit={handleNewAlbumForm}>
         <input 
           type='text'
-          name='name'
+          title='title'
           placeholder='"Album 1"' />
         <button type='submit'>Create Album!</button>
         </form>
     </React.Fragment>
   );
+}
+
+NewAlbumForm.propTypes = {
+  newAlbum: PropTypes.func
 }
 
 export default NewAlbumForm;
