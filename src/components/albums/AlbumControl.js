@@ -34,7 +34,8 @@ class AlbumControl extends React.Component {
     
     if(this.state.formVisibleOnPage) {
       currentlyVisibleState = 
-        <NewAlbumForm />;
+        <NewAlbumForm 
+          newAlbum={this.handleAddingNewAlbumToList} />;
         buttonText = "Return to Album List"
     } else {
       currentlyVisibleState = 
