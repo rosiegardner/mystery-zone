@@ -19,6 +19,15 @@ class AlbumControl extends React.Component {
     }));
   }
 
+  handleAddingNewAlbumToList = (newAlbum) => {
+    const newMainAlbumList = this.state.mainAlbumList
+      .concat(newAlbum);
+    this.setState({
+      mainAlbumList: newMainAlbumList,
+      formVisibleOnPage: false 
+    });
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
