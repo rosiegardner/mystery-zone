@@ -15,9 +15,16 @@ class AlbumControl extends React.Component {
   }
 
   handleClick = () => {
-    this.setState(prevState => ({
-      formVisibleOnPage: !prevState.formVisibleOnPage
-    }));
+    if (this.state.selectedAlbum != null) {
+      this.setState({
+        formVisibleOnPage: false,
+        selectedAlbum: null
+      });
+    } else {
+      this.setState(prevState => ({
+        formVisibleOnPage: !prevState.formVisibleOnPage
+      }));
+    }
   }
 
   handleAddingNewAlbumToList = (newAlbum) => {
