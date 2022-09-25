@@ -6,18 +6,21 @@ function AlbumList(props){
   return (
     <React.Fragment>
       <hr />
-      {props.albumList.map((album, index) => 
+      {props.albumList.map((album) => 
       <Album 
-        title={album.title}
-        key={index} />
+        albumClicked = { props.albumSelected }
+        title = {album.title}
+        id = {album.id}
+        key = {album.id} />
       )}
-      
     </React.Fragment>
   );
 }
 
 AlbumList.propTypes = {
-  albumList: PropTypes.array
+  albumList: PropTypes.array,
+  albumSelected: PropTypes.func
+
 };
 
 export default AlbumList;
