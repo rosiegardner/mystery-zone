@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReusableForm from './ReusableForm';
 import { v4 } from 'uuid';
 
 function NewAlbumForm(props){
@@ -15,13 +16,10 @@ function NewAlbumForm(props){
   
   return (
     <React.Fragment>
-      <form onSubmit={handleNewAlbumForm}>
-        <input 
-          type='text'
-          title='title'
-          placeholder='"Album 1"' />
-        <button type='submit'>Create Album!</button>
-        </form>
+      <ReusableForm
+        formSubmissionHandler = {handleNewAlbumForm} 
+        buttonText='Submit'
+        />
     </React.Fragment>
   );
 }
