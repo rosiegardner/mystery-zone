@@ -1,27 +1,23 @@
 import React from 'react';
 import Album from './Album';
+import PropTypes from 'prop-types';
 
-const mainAlbumList = [
-  {
-    title: 'Pre Pandemic'
-  },
-  {
-    title: 'Post Pandemic'
-  }
-];
-
-function AlbumList(){
+function AlbumList(props){
   return (
     <React.Fragment>
       <hr />
-      {mainAlbumList.map((album, index) => 
+      {props.albumList.map((album, index) => 
       <Album 
         title={album.title}
-        key={index}/>
-        )}
+        key={index} />
+      )}
       
     </React.Fragment>
   );
 }
+
+AlbumList.propTypes = {
+  albumList: PropTypes.array
+};
 
 export default AlbumList;
