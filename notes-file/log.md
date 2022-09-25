@@ -75,4 +75,5 @@
 * 10:00: meeting with Instructor Christy
 * 11:00: Work on albums branch and creating Album Component
 * 11:20: Reference old projects for file / component setups - Seperation of albums/imgs
+* 1:00: < break for lunch >
 
