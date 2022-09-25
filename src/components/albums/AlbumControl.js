@@ -44,6 +44,15 @@ class AlbumControl extends React.Component {
     });
   }
 
+  handleDeletingAlbum = (id) => {
+    const newMainAlbumList = this.state.mainAlbumList
+      .filter(album => album.id !== id);
+    this.setState({
+      mainAlbumList: newMainAlbumList,
+      selectedAlbum: null
+    });
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -51,7 +60,8 @@ class AlbumControl extends React.Component {
     if (this.state.selectedAlbum != null) {
       currentlyVisibleState =
       <AlbumDetail 
-        album = {this.state.selectedAlbum} />
+        album = {this.state.selectedAlbum}
+        albumDelete = {this.handleDeletingTicket} />
         buttonText = "Return to Album List";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = 
