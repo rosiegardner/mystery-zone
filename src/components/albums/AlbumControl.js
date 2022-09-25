@@ -61,7 +61,7 @@ class AlbumControl extends React.Component {
       currentlyVisibleState =
       <AlbumDetail 
         album = {this.state.selectedAlbum}
-        albumDelete = {this.handleDeletingTicket} />
+        albumDelete = {this.handleDeletingAlbum} />
         buttonText = "Return to Album List";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = 
