@@ -70,3 +70,9 @@
 * 4:30: create new branch to albums"
 * 5:00: < further exploration needed >
 
+# Sunday 9/25
+* 9:00: First day Capstone
+* 10:00: meeting with Instructor Christy
+* 11:00: Work on albums branch and creating Album Component
+* 11:20: Reference old projects for file / component setups - Seperation of albums/imgs
+
