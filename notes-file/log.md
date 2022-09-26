@@ -1,5 +1,5 @@
 ### Research & Planning Log
-## Total Hours Worked: 18hr & 50min ( 8/25/22 - 09/22/22 )
+## Total Hours Worked: 25hr & 50min ( 8/25/22 - 09/25/22 )
 
 #### August 2022 (08/25 - 08/26): 6hr & 40min
 
@@ -76,4 +76,6 @@
 * 11:00: Work on albums branch and creating Album Component
 * 11:20: Reference old projects for file / component setups - Seperation of albums/imgs
 * 1:00: < break for lunch >
+* 2:00: Back to work
+* 5:00: < complete CRUD functionality for albums >
 
