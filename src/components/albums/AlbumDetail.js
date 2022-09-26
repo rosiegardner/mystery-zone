@@ -8,6 +8,7 @@ function AlbumDetail(props){
     <React.Fragment>
       <h1>Album Detail</h1>
       <h3>{album.title}</h3>
+      <button onClick = { props.albumEdit }>Update Album</button>
       <button onClick = {() => albumDelete(album.id) }>Delete Album</button>
       <hr/>
     </React.Fragment>
@@ -16,7 +17,8 @@ function AlbumDetail(props){
 
 AlbumDetail.propTypes = {
   album: PropTypes.object,
-  albumDelete: PropTypes.func
+  albumDelete: PropTypes.func,
+  albumEdit: PropTypes.func
 };
 
 export default AlbumDetail;
