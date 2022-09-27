@@ -8,7 +8,7 @@ function NewAlbumForm(props){
   function handleNewAlbumForm(event) {
     event.preventDefault();
     props.newAlbum({
-      title: event.target.title.value
+      name: event.target.name.value
     });
   }
   
