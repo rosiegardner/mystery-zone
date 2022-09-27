@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReusableForm from './ReusableForm';
-import { v4 } from 'uuid';
+
 
 function NewAlbumForm(props){
 
   function handleNewAlbumForm(event) {
     event.preventDefault();
     props.newAlbum({
-      title: event.target.title.value,
-      id: v4()
+      title: event.target.title.value
     });
-    console.log('ran');
   }
   
   return (
