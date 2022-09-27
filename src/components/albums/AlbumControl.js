@@ -27,7 +27,7 @@ function AlbumControl() {
   const handleAddingNewAlbumToList = (newAlbum) => {
     const newMainAlbumList = mainAlbumList
       .concat(newAlbum);
-    setMainAlbumToList(newMainAlbumList);
+    setMainAlbumList(newMainAlbumList);
     setFormVisibleOnPage(false); 
   }
 
@@ -60,32 +60,32 @@ function AlbumControl() {
       currentlyVisibleState = 
       <EditAlbumForm 
         album = {selectedAlbum}
-        editAlbumClick = {this.handleEditingAlbum} />
+        editAlbumClick = {handleEditingAlbum} />
         buttonText = "Return to Album List";
     } else if (selectedAlbum != null) {
       currentlyVisibleState =
       <AlbumDetail 
         album = {selectedAlbum}
-        albumDelete = {this.handleDeletingAlbum} 
-        albumEdit = {this.handleEditClick} />
+        albumDelete = {handleDeletingAlbum} 
+        albumEdit = {handleEditClick} />
         buttonText = "Return to Album List";
     } else if (formVisibleOnPage) {
       currentlyVisibleState = 
       <NewAlbumForm 
-        newAlbum = {this.handleAddingNewAlbumToList} />;
+        newAlbum = {handleAddingNewAlbumToList} />;
       buttonText = "Return to Album List"
     } else {
       currentlyVisibleState = 
       <AlbumList 
         albumList = {mainAlbumList}
-        albumSelected = {this.handleChangingSelectedAlbum} />;
+        albumSelected = {handleChangingSelectedAlbum} />;
       buttonText = "Add Album"
     }
 
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        <button onClick={handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   
