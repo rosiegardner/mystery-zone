@@ -6,6 +6,7 @@ import EditAlbumForm from './EditAlbumForm';
 
 function AlbumControl() {
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
+  const [mainAlbumList, setMainAlbumList] = useState([]);
 
   const handleClick = () => {
     if (this.state.selectedAlbum != null) {
@@ -27,12 +28,10 @@ function AlbumControl() {
   }
 
   const handleAddingNewAlbumToList = (newAlbum) => {
-    const newMainAlbumList = this.state.mainAlbumList
+    const newMainAlbumList = mainAlbumList
       .concat(newAlbum);
-    this.setState({
-      mainAlbumList: newMainAlbumList,
-      formVisibleOnPage: false 
-    });
+    setMainAlbumToList(newMainAlbumList);
+    setFormVisibleOnPage(false); 
   }
 
   const handleChangingSelectedAlbum = (id) => {
@@ -44,23 +43,16 @@ function AlbumControl() {
   }
 
   const handleDeletingAlbum = (id) => {
-    const newMainAlbumList = this.state.mainAlbumList
+    const newMainAlbumList = mainAlbumList
       .filter(album => album.id !== id);
-    this.setState({
-      mainAlbumList: newMainAlbumList,
-      selectedAlbum: null
-    });
+    setMainAlbumList(newMainAlbumList);
   }
 
   const handleEditingAlbum = (albumToEdit) => {
-    const editedMainAlbumList = this.state.mainAlbumList
+    const editedMainAlbumList = mainAlbumList
       .filter(album => album.id !== this.state.selectedAlbum.id)
       .concat(albumToEdit);
-    this.setState({
-      mainAlbumList: editedMainAlbumList,
-      editing: false,
-      selectedAlbum: null
-    });
+    setMainAlbumList(editedMainAlbumList);
   }
 
     let currentlyVisibleState = null;
@@ -79,7 +71,7 @@ function AlbumControl() {
         albumDelete = {this.handleDeletingAlbum} 
         albumEdit = {this.handleEditClick} />
         buttonText = "Return to Album List";
-    } else if (this.state.formVisibleOnPage) {
+    } else if (formVisibleOnPage) {
       currentlyVisibleState = 
       <NewAlbumForm 
         newAlbum = {this.handleAddingNewAlbumToList} />;
@@ -87,7 +79,7 @@ function AlbumControl() {
     } else {
       currentlyVisibleState = 
       <AlbumList 
-        albumList = {this.state.mainAlbumList}
+        albumList = {mainAlbumList}
         albumSelected = {this.handleChangingSelectedAlbum} />;
       buttonText = "Add Album"
     }
