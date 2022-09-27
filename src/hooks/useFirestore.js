@@ -7,7 +7,7 @@
 
 //   useEffect (() => {
 //     const queryByTimestamp = query(
-//       collection(db, "images"),
+//       collection(db, 'albums', "images"),
 //       orderBy('createdAt', 'desc')
 //     );
 

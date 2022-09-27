@@ -60,7 +60,7 @@ function AlbumControl() {
   }
 
   const handleDeletingAlbum = async (id) => {
-    await deleteDoc(doc(db, "tickets", id));
+    await deleteDoc(doc(db, "albums", id));
     setSelectedAlbum(null);
   }
 
