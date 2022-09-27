@@ -79,3 +79,6 @@
 * 2:00: Back to work
 * 5:00: < complete CRUD functionality for albums >
 
+# Monday 9/26
+* 6:00: Create new branch for database structuring
+
