@@ -1,5 +1,5 @@
 ### Research & Planning Log
-## Total Hours Worked: 25hr & 50min ( 8/25/22 - 09/25/22 )
+## Total Hours Worked: 28hr & 50min ( 8/25/22 - 09/26/22 )
 
 #### August 2022 (08/25 - 08/26): 6hr & 40min
 
@@ -28,7 +28,7 @@
 
 * `https://github.com/rosiegardner/firebase-practice.git`
 
-#### September 2022 (09/05 - 09/18): 11 hours
+#### September 2022 (09/05 - 09/26): 22hrs & 10min
 
 # Monday 9/5
 * 1:00: Create new VScode - file setup
@@ -81,4 +81,6 @@
 
 # Monday 9/26
 * 6:00: Create new branch for database structuring
-
+* 7:00: Continue - connect firebase
+* 8:00: ...
+* 9:00: < end for the day >
