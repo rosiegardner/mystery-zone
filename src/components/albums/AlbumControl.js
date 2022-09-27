@@ -1,42 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NewAlbumForm from './NewAlbumForm';
 import AlbumList from './AlbumList';
 import AlbumDetail from './AlbumDetail';
 import EditAlbumForm from './EditAlbumForm';
 
-class AlbumControl extends React.Component {
+function AlbumControl() {
+  const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     formVisibleOnPage: false,
-  //     mainAlbumList: [],
-  //     selectedAlbum: null,
-  //     editing: false
-  //   };
-  // }
-
-  handleClick = () => {
+  const handleClick = () => {
     if (this.state.selectedAlbum != null) {
+      setFormVisibleOnPage(false);
       this.setState({
         formVisibleOnPage: false,
         selectedAlbum: null,
-        editing: false
+        //editing: false
       });
     } else {
-      this.setState(prevState => ({
-        formVisibleOnPage: !prevState.formVisibleOnPage
-      }));
+      setFormVisibileOnPage(!formVisibleOnPage);
     }
   }
 
-  handleEditClick = () => {
+  const handleEditClick = () => {
     this.setState({
       editing: true
     });
   }
 
-  handleAddingNewAlbumToList = (newAlbum) => {
+  const handleAddingNewAlbumToList = (newAlbum) => {
     const newMainAlbumList = this.state.mainAlbumList
       .concat(newAlbum);
     this.setState({
@@ -45,7 +35,7 @@ class AlbumControl extends React.Component {
     });
   }
 
-  handleChangingSelectedAlbum = (id) => {
+  const handleChangingSelectedAlbum = (id) => {
     const selectedAlbum = this.state.mainAlbumList
       .filter(album => album.id === id)[0];
     this.setState({
@@ -53,7 +43,7 @@ class AlbumControl extends React.Component {
     });
   }
 
-  handleDeletingAlbum = (id) => {
+  const handleDeletingAlbum = (id) => {
     const newMainAlbumList = this.state.mainAlbumList
       .filter(album => album.id !== id);
     this.setState({
@@ -62,7 +52,7 @@ class AlbumControl extends React.Component {
     });
   }
 
-  handleEditingAlbum = (albumToEdit) => {
+  const handleEditingAlbum = (albumToEdit) => {
     const editedMainAlbumList = this.state.mainAlbumList
       .filter(album => album.id !== this.state.selectedAlbum.id)
       .concat(albumToEdit);
@@ -73,7 +63,6 @@ class AlbumControl extends React.Component {
     });
   }
 
-  render(){
     let currentlyVisibleState = null;
     let buttonText = null;
     
@@ -109,7 +98,7 @@ class AlbumControl extends React.Component {
         <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
-  }
+  
 
 }
 
