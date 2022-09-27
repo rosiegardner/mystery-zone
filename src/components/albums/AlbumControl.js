@@ -7,24 +7,21 @@ import EditAlbumForm from './EditAlbumForm';
 function AlbumControl() {
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
   const [mainAlbumList, setMainAlbumList] = useState([]);
+  const [selectedAlbum, setSelectedAlbum] = useState(null);
+  const [editing, setEditing] = useState(false);
 
   const handleClick = () => {
-    if (this.state.selectedAlbum != null) {
+    if (selectedAlbum != null) {
       setFormVisibleOnPage(false);
-      this.setState({
-        formVisibleOnPage: false,
-        selectedAlbum: null,
-        //editing: false
-      });
+      setSelectedAlbum(null);
+      setEditing(false);
     } else {
-      setFormVisibileOnPage(!formVisibleOnPage);
+      setFormVisibleOnPage(!formVisibleOnPage);
     }
   }
 
   const handleEditClick = () => {
-    this.setState({
-      editing: true
-    });
+    setEditing(true);
   }
 
   const handleAddingNewAlbumToList = (newAlbum) => {
@@ -35,39 +32,40 @@ function AlbumControl() {
   }
 
   const handleChangingSelectedAlbum = (id) => {
-    const selectedAlbum = this.state.mainAlbumList
+    const selection = mainAlbumList
       .filter(album => album.id === id)[0];
-    this.setState({
-      selectedAlbum: selectedAlbum
-    });
+    setSelectedAlbum(selection);
   }
 
   const handleDeletingAlbum = (id) => {
     const newMainAlbumList = mainAlbumList
       .filter(album => album.id !== id);
     setMainAlbumList(newMainAlbumList);
+    setSelectedAlbum(null);
   }
 
   const handleEditingAlbum = (albumToEdit) => {
     const editedMainAlbumList = mainAlbumList
-      .filter(album => album.id !== this.state.selectedAlbum.id)
+      .filter(album => album.id !== selectedAlbum.id)
       .concat(albumToEdit);
     setMainAlbumList(editedMainAlbumList);
+    setEditing(false);
+    setSelectedAlbum(null);
   }
 
     let currentlyVisibleState = null;
     let buttonText = null;
     
-    if (this.state.editing) {
+    if (editing) {
       currentlyVisibleState = 
       <EditAlbumForm 
-        album = {this.state.selectedAlbum}
+        album = {selectedAlbum}
         editAlbumClick = {this.handleEditingAlbum} />
         buttonText = "Return to Album List";
-    } else if (this.state.selectedAlbum != null) {
+    } else if (selectedAlbum != null) {
       currentlyVisibleState =
       <AlbumDetail 
-        album = {this.state.selectedAlbum}
+        album = {selectedAlbum}
         albumDelete = {this.handleDeletingAlbum} 
         albumEdit = {this.handleEditClick} />
         buttonText = "Return to Album List";
