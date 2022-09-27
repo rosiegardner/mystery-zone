@@ -6,15 +6,15 @@ import EditAlbumForm from './EditAlbumForm';
 
 class AlbumControl extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      formVisibleOnPage: false,
-      mainAlbumList: [],
-      selectedAlbum: null,
-      editing: false
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     formVisibleOnPage: false,
+  //     mainAlbumList: [],
+  //     selectedAlbum: null,
+  //     editing: false
+  //   };
+  // }
 
   handleClick = () => {
     if (this.state.selectedAlbum != null) {
