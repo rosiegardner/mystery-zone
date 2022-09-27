@@ -8,7 +8,7 @@ function EditAlbumForm(props) {
   function handleEditAlbumFormSubmission(event) {
     event.preventDefault();
     props.editAlbumClick({
-      title: event.target.title.value,
+      name: event.target.name.value,
       id: album.id
     });
   }

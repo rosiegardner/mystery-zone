@@ -9,7 +9,7 @@ function AlbumList(props){
       {props.albumList.map((album) => 
       <Album 
         albumClicked = { props.albumSelected }
-        title = {album.title}
+        name = {album.name}
         id = {album.id}
         key = {album.id} />
       )}
