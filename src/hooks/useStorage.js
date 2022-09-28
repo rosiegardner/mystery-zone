@@ -1,43 +1,43 @@
-// import { useState, useEffect} from "react";
-// import { imgStorage, db } from '../firebase.js';
-// import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-// import { serverTimestamp, collection, addDoc } from 'firebase/firestore';
+import { useState, useEffect} from "react";
+import { imgStorage, db } from '../firebase.js';
+import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import { serverTimestamp, collection, addDoc } from 'firebase/firestore';
 
 
-// const useStorage = (file) => {
-//   // console.log('why are you still running')
-//   const [progress, setProgress] = useState(0);
-//   const [error, setError] = useState(null);
-//   const [url, setUrl] = useState(null);
+const useStorage = (file) => {
+  // console.log('why are you still running')
+  const [progress, setProgress] = useState(0);
+  const [error, setError] = useState(null);
+  const [url, setUrl] = useState(null);
 
-//   useEffect(() => {
-//    // console.log('running too much')
-//     const storageRef = ref(imgStorage, file.name);
-//     const collectionRef = collection(db, 'images');
+  useEffect(() => {
+   // console.log('running too much')
+    const storageRef = ref(imgStorage, file.name);
+    const collectionRef = collection(db, 'albums', 'images');
   
-//     const uploadTask = uploadBytesResumable(storageRef, file);
+    const uploadTask = uploadBytesResumable(storageRef, file);
 
-//     uploadTask.on('state_changed',(snapshot) => {
-//       let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-//       setProgress(percentage);
-//       }, (err) => {
-//         setError(err);
-//       }, () => {
-//         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-//         const createdAt = serverTimestamp();
-//         addDoc(collectionRef, { url, createdAt });
-//         setUrl(url);
-//        console.log('ran')
-//       });
-//     })
+    uploadTask.on('state_changed',(snapshot) => {
+      let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      setProgress(percentage);
+      }, (err) => {
+        setError(err);
+      }, () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+        const createdAt = serverTimestamp();
+        addDoc(collectionRef, { url, createdAt });
+        setUrl(url);
+       console.log('ran')
+      });
+    })
 
-//   }, [file]);
+  }, [file]);
 
-//   return { progress, url, error }
-// }
+  return { progress, url, error }
+}
 
 
-// export default useStorage;
+export default useStorage;
 
 
 // import { useState, useEffect } from 'react';
