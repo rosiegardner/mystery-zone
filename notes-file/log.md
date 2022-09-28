@@ -84,3 +84,6 @@
 * 7:00: Continue - connect firebase
 * 8:00: ...
 * 9:00: < end for the day >
+
+# Tuesday 9/27    
+* 5:00: Continue with image uploading
