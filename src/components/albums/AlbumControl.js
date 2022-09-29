@@ -6,7 +6,7 @@ import EditAlbumForm from './EditAlbumForm';
 import { db } from '../.././firebase.js';
 import { collection, addDoc, doc, onSnapshot, updateDoc, deleteDoc } from 'firebase/firestore';
 
-function AlbumControl() {
+function AlbumControl() {    
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
   const [mainAlbumList, setMainAlbumList] = useState([]);
   const [selectedAlbum, setSelectedAlbum] = useState(null);
@@ -50,7 +50,6 @@ function AlbumControl() {
   const handleAddingNewAlbumToList = async (newAlbumData) => {
     await addDoc(collection(db, "albums"), newAlbumData);
     setFormVisibleOnPage(false);
-   
   }
 
   const handleChangingSelectedAlbum = (id) => {
