@@ -89,3 +89,8 @@
 * 5:00: Continue with image uploading
 * 6|7|8
 * 9:00: < end for the day >
+
+# Wednesday 9/28
+* 4:00: - start -
+* 5:00: fixbug- app renders images and albums
+* 5:30: -continue with nesting images in albums
