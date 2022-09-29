@@ -21,7 +21,7 @@ const useAlbum = () => {
 export { AlbumContext, AlbumProvider, useAlbum }
 
 // Inside any component that is wrapped in your <AlbumProvider>:
-// import useAlbum from './hooks/AlbumContext' << or something
+// import useAlbum from './hooks/useContext' << or something
 // const [album, setAlbum] = useAlbum()
 
 // setAlbum(newAlbumFromTheForm)

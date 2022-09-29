@@ -3,6 +3,7 @@ import NewAlbumForm from './NewAlbumForm';
 import AlbumList from './AlbumList';
 import AlbumDetail from './AlbumDetail';
 import EditAlbumForm from './EditAlbumForm';
+//import { useAlbum } from '../../hooks/useContext';
 import { db } from '../.././firebase.js';
 import { collection, addDoc, doc, onSnapshot, updateDoc, deleteDoc } from 'firebase/firestore';
 
@@ -12,6 +13,7 @@ function AlbumControl() {
   const [selectedAlbum, setSelectedAlbum] = useState(null);
   const [editing, setEditing] = useState(false);
   const [error, setError] = useState(null);
+  //const [album, setAlbum] = useAlbum();
 
   useEffect(() => {
     const unSubscribe = onSnapshot(
@@ -32,6 +34,7 @@ function AlbumControl() {
     return () => unSubscribe();
   }, []);
 
+  
 
   const handleClick = () => {
     if (selectedAlbum != null) {
@@ -50,6 +53,7 @@ function AlbumControl() {
   const handleAddingNewAlbumToList = async (newAlbumData) => {
     await addDoc(collection(db, "albums"), newAlbumData);
     setFormVisibleOnPage(false);
+    //setAlbum(newAlbumData);
   }
 
   const handleChangingSelectedAlbum = (id) => {
