@@ -1,35 +1,35 @@
-// import { useState, useEffect } from 'react';
-// import { db } from '../firebase.js';
-// import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
+import { useState, useEffect } from 'react';
+import { db } from '../firebase.js';
+import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 
-// const useFirestore = () => {
-//   const [docs, setDocs] = useState([]);
+const useFirestore = () => {
+  const [docs, setDocs] = useState([]);
 
-//   useEffect (() => {
-//     const queryByTimestamp = query(
-//       collection(db, 'albums', "images"),
-//       orderBy('createdAt', 'desc')
-//     );
+  useEffect (() => {
+    const queryByTimestamp = query(
+      collection(db, "images"),
+      orderBy('createdAt', 'desc')
+    );
 
-//     const unSubscribe = onSnapshot(
-//       queryByTimestamp,
-//       (querySnapshot) => {
-//         let documents = [];
-//         querySnapshot.forEach((doc) => {
-//           documents.push({...doc.data(), id: doc.id})
-//         });
-//         setDocs(documents);
-//       });
+    const unSubscribe = onSnapshot(
+      queryByTimestamp,
+      (querySnapshot) => {
+        let documents = [];
+        querySnapshot.forEach((doc) => {
+          documents.push({...doc.data(), id: doc.id})
+        });
+        setDocs(documents);
+      });
 
-//       return () => unSubscribe();
+      return () => unSubscribe();
     
 
-//   }, [])
+  }, [])
 
-//   return { docs };
-// }
+  return { docs };
+}
 
-// export default useFirestore;
+export default useFirestore;
 
   // ** Old CODE **
     // const useFirestore = (collection) => {
