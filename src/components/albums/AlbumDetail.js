@@ -10,7 +10,6 @@ function AlbumDetail(props){
       <h3>{album.name}</h3>
       <button onClick = { props.albumEdit }>Update Album</button>
       <button onClick = {() => albumDelete(album.id) }>Delete Album</button>
-      <hr/>
     </React.Fragment>
   );
 }

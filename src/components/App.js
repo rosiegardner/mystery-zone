@@ -14,8 +14,8 @@ function App() {
     <AlbumProvider>
     <div className="App">
       <Header />
-      <AlbumControl  />
-      <UploadForm />
+      <AlbumControl />
+      <UploadForm /> 
       <ImageGrid setSelectedImage={setSelectedImage} />
       { selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} /> }
     </div>
