@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AlbumProvider } from '../hooks/useContext';
 import Header from "./Header";
 import AlbumControl from './albums/AlbumControl';
 import UploadForm from "./UploadForm";
@@ -10,6 +11,7 @@ function App() {
 
   
   return (
+    <AlbumProvider>
     <div className="App">
       <Header />
       <AlbumControl  />
@@ -17,6 +19,7 @@ function App() {
       <ImageGrid setSelectedImage={setSelectedImage} />
       { selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} /> }
     </div>
+    </AlbumProvider>
   );
 }
 
