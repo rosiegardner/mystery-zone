@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ImageGrid from '../ImageGrid';
 
 function AlbumDetail(props){
   const { album, albumDelete } = props;
@@ -11,6 +12,7 @@ function AlbumDetail(props){
       <button onClick = { props.albumEdit }>Update Album</button>
       <button onClick = {() => albumDelete(album.id) }>Delete Album</button>
       <hr/>
+      {<ImageGrid />}
     </React.Fragment>
   );
 }

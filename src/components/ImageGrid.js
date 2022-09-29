@@ -1,7 +1,7 @@
 import React from 'react';
 import useFirestore from '../hooks/useFirestore';
 
-const ImageGrid = ({ setSelectedImage }) => {
+function ImageGrid({ setSelectedImage }){
   const { docs } = useFirestore('albums', 'images');
 
   return (

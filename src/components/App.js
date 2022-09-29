@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import AlbumControl from './albums/AlbumControl';
-import UploadForm from "./UploadForm";
+// import UploadForm from "./UploadForm";
 import ImageGrid from "./ImageGrid";
 import Modal from "./Modal";
 
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <AlbumControl />
-      <UploadForm />
+      {/* <UploadForm /> */}
       <ImageGrid setSelectedImage={setSelectedImage} />
       { selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} /> }
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReusableForm from './ReusableForm';
+import UploadForm from '../UploadForm';
 
 
 function NewAlbumForm(props){
@@ -18,6 +19,7 @@ function NewAlbumForm(props){
         formSubmissionHandler = {handleNewAlbumForm} 
         buttonText='Submit'
         />
+        <UploadForm />
     </React.Fragment>
   );
 }
