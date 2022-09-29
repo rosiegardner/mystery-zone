@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import ImageGrid from '../ImageGrid';
+import Modal from '../Modal';
 
 function AlbumDetail(props){
   const { album, albumDelete } = props;
+  const [selectedImage, setSelectedImage] = useState(null);
 
   return (
     <React.Fragment>
@@ -12,7 +14,8 @@ function AlbumDetail(props){
       <button onClick = { props.albumEdit }>Update Album</button>
       <button onClick = {() => albumDelete(album.id) }>Delete Album</button>
       <hr/>
-      {<ImageGrid />}
+      <ImageGrid setSelectedImage={setSelectedImage} />
+      { selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} /> }
     </React.Fragment>
   );
 }
