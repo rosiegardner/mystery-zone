@@ -98,4 +98,4 @@
 * 9:00: < end for the day >
 
 # Thursday 9/29
-* 7:00: - start -
+* 7:00: - create new branch 'albums-images' -
