@@ -7,7 +7,7 @@ const useFirestore = () => {
 
   useEffect (() => {
     const queryByTimestamp = query(
-      collection(db, "images"),
+      collection(db, "albums"),
       orderBy('createdAt', 'desc')
     );
 
@@ -16,7 +16,9 @@ const useFirestore = () => {
       (querySnapshot) => {
         let documents = [];
         querySnapshot.forEach((doc) => {
-          documents.push({...doc.data(), id: doc.id})
+          documents.push({
+            ...doc.data(),
+            id: doc.id})
         });
         setDocs(documents);
       });
@@ -28,6 +30,33 @@ const useFirestore = () => {
 
   return { docs };
 }
+
+// const useFirestore = () => {
+//   const [docs, setDocs] = useState([]);
+
+//   useEffect (() => {
+//     const queryByTimestamp = query(
+//       collection(db, "images"),
+//       orderBy('createdAt', 'desc')
+//     );
+
+//     const unSubscribe = onSnapshot(
+//       queryByTimestamp,
+//       (querySnapshot) => {
+//         let documents = [];
+//         querySnapshot.forEach((doc) => {
+//           documents.push({...doc.data(), id: doc.id})
+//         });
+//         setDocs(documents);
+//       });
+
+//       return () => unSubscribe();
+    
+
+//   }, [])
+
+//   return { docs };
+// }
 
 export default useFirestore;
 

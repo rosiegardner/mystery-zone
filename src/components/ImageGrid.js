@@ -18,3 +18,4 @@ const ImageGrid = ({ setSelectedImage }) => {
 }
 
 export default ImageGrid;
+

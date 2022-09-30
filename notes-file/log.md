@@ -106,3 +106,5 @@
 
 # Friday 9/30
 * 12:30: -start working on 'albums-images' branch
+* 1|2: ------
+* 3:30: < end >

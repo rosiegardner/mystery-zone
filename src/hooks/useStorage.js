@@ -13,7 +13,7 @@ const useStorage = (file) => {
   useEffect(() => {
    // console.log('running too much')
     const storageRef = ref(imgStorage, file.name);
-    const collectionRef = collection(db, 'images');
+    const collectionRef = collection(db, 'albums');
   
     const uploadTask = uploadBytesResumable(storageRef, file);
 
@@ -35,6 +35,37 @@ const useStorage = (file) => {
 
   return { progress, url, error }
 }
+// const useStorage = (file) => {
+//   // console.log('why are you still running')
+//   const [progress, setProgress] = useState(0);
+//   const [error, setError] = useState(null);
+//   const [url, setUrl] = useState(null);
+
+//   useEffect(() => {
+//    // console.log('running too much')
+//     const storageRef = ref(imgStorage, file.name);
+//     const collectionRef = collection(db, 'images');
+  
+//     const uploadTask = uploadBytesResumable(storageRef, file);
+
+//     uploadTask.on('state_changed',(snapshot) => {
+//       let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+//       setProgress(percentage);
+//       }, (err) => {
+//         setError(err);
+//       }, () => {
+//         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+//         const createdAt = serverTimestamp();
+//         addDoc(collectionRef, { url, createdAt });
+//         setUrl(url);
+//        console.log('ran')
+//       });
+//     })
+
+//   }, [file]);
+
+//   return { progress, url, error }
+// }
 
 
 export default useStorage;
