@@ -103,3 +103,6 @@
 * 8:00: ------
 * `https://github.com/rosiegardner/albums-images.git`
 * 9:30: < end for the day >
+
+# Friday 9/30
+* 12:30: -start working on 'albums-images' branch
