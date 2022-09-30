@@ -1,5 +1,5 @@
 ### Research & Planning Log
-## Total Hours Worked: 37hr & 50min ( 8/25/22 - 09/28/22 )
+## Total Hours Worked: 40hr & 20min ( 8/25/22 - 09/28/22 )
 
 #### August 2022 (08/25 - 08/26): 6hr & 40min
 
@@ -28,7 +28,7 @@
 
 * `https://github.com/rosiegardner/firebase-practice.git`
 
-#### September 2022 (09/05 - 09/28): 31hrs & 10min
+#### September 2022 (09/05 - 09/29): 33hrs & 40min
 
 # Monday 9/5
 * 1:00: Create new VScode - file setup
@@ -98,4 +98,9 @@
 * 9:00: < end for the day >
 
 # Thursday 9/29
-* 7:00: - start -
+* 7:00: - create new branch 'albums-images', build along tutorial-
+* `https://www.youtube.com/watch?v=SvTfX7t_qSc`
+* 8:00: ------
+* `https://github.com/rosiegardner/albums-images.git`
+* 9:30: < end for the day >
+
