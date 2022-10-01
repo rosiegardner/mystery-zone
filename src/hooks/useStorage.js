@@ -13,7 +13,7 @@ const useStorage = (file) => {
   useEffect(() => {
    // console.log('running too much')
     const storageRef = ref(imgStorage, file.name);
-    const collectionRef = collection(db, 'albums');
+    const collectionRef = collection(db, 'images');
   
     const uploadTask = uploadBytesResumable(storageRef, file);
 

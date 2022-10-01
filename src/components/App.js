@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "./Header";
 import UploadForm from "./UploadForm";
 import ImageGrid from "./ImageGrid";
