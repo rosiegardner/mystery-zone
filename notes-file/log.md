@@ -108,3 +108,9 @@
 * 12:30: -start working on 'albums-images' branch
 * 1|2: ------
 * 3:30: < end >
+
+#### October 2022 (10/01 - 10/01 )
+
+# Saturday 10/01
+
+* 11:45 - Resume refactoring / updating code in branch 'albums-images' -
