@@ -11,7 +11,6 @@ const useStorage = (file) => {
   const [url, setUrl] = useState(null);
 
   useEffect(() => {
-   // console.log('running too much')
     const storageRef = ref(imgStorage, file.name);
     const collectionRef = collection(db, 'images');
   
