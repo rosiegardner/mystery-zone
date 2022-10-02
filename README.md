@@ -28,8 +28,7 @@ This application allows users to upload png or jpeg files from personal device. 
 
 ### Known Bugs
 
-* Firebase / Storage is uploading selected files multiple times.
-
+* NO KNOWN BUGS
 ### Contact
 
 * Rosie Gardner <rosiegardner78@gmail.com>
