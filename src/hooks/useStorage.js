@@ -4,7 +4,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { serverTimestamp, collection, addDoc } from 'firebase/firestore';
 
 
-const useStorage = (file) => {
+const useStorage = (file, albumId) => {
   // console.log('why are you still running')
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
@@ -25,13 +25,13 @@ const useStorage = (file) => {
       }, () => {
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
         const createdAt = serverTimestamp();
-        addDoc(collectionRef, { url, createdAt });
+        addDoc(collectionRef, { url, createdAt, albumId });
         setUrl(url);
        console.log('ran')
       });
     })
 
-  }, [file]);
+  }, [file, albumId]);
 
   return { progress, url, error }
 }

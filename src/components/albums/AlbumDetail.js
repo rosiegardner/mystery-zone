@@ -12,7 +12,7 @@ function AlbumDetail(props){
     <React.Fragment>
       <h1>Album Detail</h1>
       <h3>{album.name}</h3>
-      <UploadForm />
+      <UploadForm albumId={album.id} />
       <ImageGrid setSelectedImage={setSelectedImage} />
       { selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} /> }
       <button onClick = { props.albumEdit }>Update Album</button>
