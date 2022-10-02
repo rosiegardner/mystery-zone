@@ -29,6 +29,7 @@ This application allows users to upload png or jpeg files from personal device. 
 ### Known Bugs
 
 * NO KNOWN BUGS
+
 ### Contact
 
 * Rosie Gardner <rosiegardner78@gmail.com>
