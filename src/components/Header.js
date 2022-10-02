@@ -1,13 +1,24 @@
 import React from "react";
+import styled from 'styled-components';
 
-const Header = () => {
+const StyledWrapper = styled.section`
+  font-size: 24px;
+  font-style: monospace;
+  text-align: center;
+  color: white;
+  background-color: black;
+  `;
+
+function Header(){
   return (
-    <div className="header">
-      <h1>Drag the Queen</h1>
-      <h2>Welcome to Doom Town PDX</h2>
+    <StyledWrapper>
+      Drag the Queen
+      <h2>Doom Town PDX</h2>
       <p>The decline of Portland Punk Civilization</p>
-    </div>
-  )
+    </StyledWrapper>
+
+    
+  );
 }
 
 export default Header;
