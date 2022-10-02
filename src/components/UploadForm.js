@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import ProgressBar from './ProgressBar';
 
-const UploadForm = (props) => {
+function UploadForm(props){
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
 

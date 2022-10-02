@@ -13,7 +13,7 @@ function AlbumDetail(props){
       <h1>Album Detail</h1>
       <h3>{album.name}</h3>
       <UploadForm albumId={album.id} />
-      <ImageGrid setSelectedImage={setSelectedImage} />
+      <ImageGrid setSelectedImage={setSelectedImage} albumId={album.id} />
       { selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} /> }
       <button onClick = { props.albumEdit }>Update Album</button>
       <button onClick = {() => albumDelete(album.id) }>Delete Album</button>

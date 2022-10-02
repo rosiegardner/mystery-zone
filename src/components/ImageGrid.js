@@ -1,8 +1,9 @@
 import React from 'react';
 import useFirestore from '../hooks/useFirestore';
+import PropTypes from 'prop-types';
 
-const ImageGrid = ({ setSelectedImage }) => {
-  const { docs } = useFirestore('images');
+function ImageGrid({ setSelectedImage, albumId }){
+  const { docs } = useFirestore(albumId);
 
   return (
     <div className="img-grid">
@@ -15,5 +16,9 @@ const ImageGrid = ({ setSelectedImage }) => {
     </div>
   )
 }
+
+ImageGrid.propTypes ={
+  albumId: PropTypes.string
+};
 
 export default ImageGrid;

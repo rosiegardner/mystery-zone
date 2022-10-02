@@ -5,13 +5,11 @@ import { serverTimestamp, collection, addDoc } from 'firebase/firestore';
 
 
 const useStorage = (file, albumId) => {
-  // console.log('why are you still running')
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
   const [url, setUrl] = useState(null);
 
   useEffect(() => {
-   // console.log('running too much')
     const storageRef = ref(imgStorage, file.name);
     const collectionRef = collection(db, 'images');
   

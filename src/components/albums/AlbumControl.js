@@ -4,7 +4,8 @@ import AlbumList from './AlbumList';
 import AlbumDetail from './AlbumDetail';
 import EditAlbumForm from './EditAlbumForm';
 import { db } from '../.././firebase.js';
-import { collection, addDoc, doc, onSnapshot, updateDoc, deleteDoc } from 'firebase/firestore';
+import { collection, addDoc, doc, updateDoc, deleteDoc } from 'firebase/firestore';
+import { query, onSnapshot, serverTimestamp, orderBy} from 'firebase/firestore';
 
 function AlbumControl() {
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
@@ -14,8 +15,13 @@ function AlbumControl() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const unSubscribe = onSnapshot(
+    const collectionTimestamp = query(
       collection(db, "albums"),
+      orderBy('createdAt', 'desc')
+    );
+
+    const unSubscribe = onSnapshot(
+      collectionTimestamp,
       (collectionSnapshot) => {
         const albums = [];
         collectionSnapshot.forEach((doc) => {
@@ -23,7 +29,8 @@ function AlbumControl() {
             ...doc.data(), id: doc.id
           });
         });
-        setMainAlbumList(albums);
+        const createdAt = serverTimestamp()
+        setMainAlbumList(albums, { createdAt });
       }, 
       (error) => {
         setError(error.message);

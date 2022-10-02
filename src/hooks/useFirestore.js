@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { db } from '../firebase.js';
-import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
+import { collection, onSnapshot, query, where } from "firebase/firestore";
 
-const useFirestore = () => {
+const useFirestore = (albumId) => {
   const [docs, setDocs] = useState([]);
 
   useEffect (() => {
     const queryByTimestamp = query(
       collection(db, "images"),
-      orderBy('createdAt', 'desc')
+      where("albumId", "==", albumId),
     );
 
     const unSubscribe = onSnapshot(
