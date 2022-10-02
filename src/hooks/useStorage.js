@@ -1,17 +1,15 @@
 import { useState, useEffect} from "react";
 import { imgStorage, db } from '../firebase.js';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import { serverTimestamp, collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 
 
-const useStorage = (file) => {
-  // console.log('why are you still running')
+const useStorage = (file, albumId) => {
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
   const [url, setUrl] = useState(null);
 
   useEffect(() => {
-   // console.log('running too much')
     const storageRef = ref(imgStorage, file.name);
     const collectionRef = collection(db, 'images');
   
@@ -24,14 +22,12 @@ const useStorage = (file) => {
         setError(err);
       }, () => {
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-        const createdAt = serverTimestamp();
-        addDoc(collectionRef, { url, createdAt });
+        addDoc(collectionRef, { url, albumId });
         setUrl(url);
-       console.log('ran')
       });
     })
 
-  }, [file]);
+  }, [file, albumId]);
 
   return { progress, url, error }
 }

@@ -1,5 +1,9 @@
 ### Research & Planning Log
+<<<<<<< HEAD
 ## Total Hours Worked: 40hr & 20min ( 8/25/22 - 09/28/22 )
+=======
+## Total Hours Worked: 32hr & 50min ( 8/25/22 - 09/26/22 )
+>>>>>>> images
 
 #### August 2022 (08/25 - 08/26): 6hr & 40min
 
@@ -28,7 +32,11 @@
 
 * `https://github.com/rosiegardner/firebase-practice.git`
 
+<<<<<<< HEAD
 #### September 2022 (09/05 - 09/29): 33hrs & 40min
+=======
+#### September 2022 (09/05 - 09/26): 26hrs & 10min
+>>>>>>> images
 
 # Monday 9/5
 * 1:00: Create new VScode - file setup
@@ -69,6 +77,7 @@
 `https://www.youtube.com/watch?v=gm-bggVJb5k`
 * 4:30: create new branch to albums"
 * 5:00: < further exploration needed >
+<<<<<<< HEAD
 
 # Sunday 9/25
 * 9:00: First day Capstone
@@ -103,4 +112,30 @@
 * 8:00: ------
 * `https://github.com/rosiegardner/albums-images.git`
 * 9:30: < end for the day >
+=======
+>>>>>>> images
 
+# Sunday 9/25
+* 9:00: First day Capstone
+* 10:00: meeting with Instructor Christy
+* 11:00: Work on albums branch and creating Album Component
+* 11:20: Reference old projects for file / component setups - Seperation of albums/imgs
+* 1:00: < break for lunch >
+* 2:00: Back to work
+* 5:00: < complete CRUD functionality for albums >
+
+# Monday 9/26
+* 6:00: Create new branch for database structuring
+* 7:00: Continue - connect firebase
+* 8:00: ...
+* 9:00: < end for the day >
+
+# Tuesday 9/27    
+* 5:00: Continue with image uploading
+* 6|7|8
+* 9:00: < end for the day >
+
+# Wednesday 9/28
+* 4:00: - start -
+* 5:00: fixbug- app renders images and albums
+* 5:30: -continue with nesting images in albums
