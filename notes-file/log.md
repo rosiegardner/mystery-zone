@@ -129,3 +129,4 @@
 * 12:00: ------ successfully restructed database for albums and images ------
 * 1:00: < break for lunch >
 * 2:00: merge images branch with main branch.
+* 3:00: create new branch 'styling'
