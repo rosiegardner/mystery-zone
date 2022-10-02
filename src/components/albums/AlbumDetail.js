@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import UploadForm from '../UploadForm';
-import ImageGrid from '../ImageGrid';
-import Modal from '../Modal';
+import UploadForm from '.././images/UploadForm';
+import ImageGrid from '.././images/ImageGrid';
+import Modal from '.././images/Modal';
 
 function AlbumDetail(props){
   const { album, albumDelete } = props;
