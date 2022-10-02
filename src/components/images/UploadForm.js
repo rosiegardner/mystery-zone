@@ -19,7 +19,7 @@ function UploadForm(props){
       setError('Please select an image file (png / jpeg)');
     }
   }
-  console.log(file);
+  
   return (
     <form>
       <label>
