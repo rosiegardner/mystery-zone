@@ -4,7 +4,7 @@ import AlbumList from './AlbumList';
 import AlbumDetail from './AlbumDetail';
 import EditAlbumForm from './EditAlbumForm';
 import { db } from '../.././firebase.js';
-import { collection, addDoc, doc, onSnapshot, updateDoc, deleteDoc } from 'firebase/firestore';
+import { collection, addDoc, doc, onSnapshot, query, orderBy, updateDoc, deleteDoc } from 'firebase/firestore';
 
 function AlbumControl() {
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
@@ -12,25 +12,57 @@ function AlbumControl() {
   const [selectedAlbum, setSelectedAlbum] = useState(null);
   const [editing, setEditing] = useState(false);
   const [error, setError] = useState(null);
+  
+  
+  const useFirestore = () => {
+    //const [albums, setAlbums] = useState([]);
 
-  useEffect(() => {
-    const unSubscribe = onSnapshot(
-      collection(db, "albums"),
-      (collectionSnapshot) => {
-        const albums = [];
-        collectionSnapshot.forEach((doc) => {
-          albums.push({
-            ...doc.data(), id: doc.id
+    useEffect (() => {
+      const queryByTimestamp = query(
+        collection(db, "albums"),
+        orderBy('createdAt', 'desc')
+      );
+  
+      const unSubscribe = onSnapshot(
+        queryByTimestamp,
+        (querySnapshot) => {
+          const albums = [];
+          querySnapshot.forEach((doc) => {
+            albums.push({
+              ...doc.data(),
+              id: doc.id})
           });
-        });
-        setMainAlbumList(albums);
-      }, 
-      (error) => {
-        setError(error.message);
-      }
-    );
-    return () => unSubscribe();
-  }, []);
+          setMainAlbumList(albums);
+        },
+        (error) => {
+          setError(error.message);
+        }
+      );
+      return () => unSubscribe();
+  
+    }, [])
+
+    return {useFirestore};
+  }
+
+  // useEffect(() => {
+  //   const unSubscribe = onSnapshot(
+  //     collection(db, "albums"),
+  //     (collectionSnapshot) => {
+  //       const albums = [];
+  //       collectionSnapshot.forEach((doc) => {
+  //         albums.push({
+  //           ...doc.data(), id: doc.id
+  //         });
+  //       });
+  //       setMainAlbumList(albums);
+  //     }, 
+  //     (error) => {
+  //       setError(error.message);
+  //     }
+  //   );
+  //   return () => unSubscribe();
+  // }, []);
 
 
   const handleClick = () => {
