@@ -1,7 +1,7 @@
 import { useState, useEffect} from "react";
 import { imgStorage, db } from '../firebase.js';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import { serverTimestamp, collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 
 
 const useStorage = (file, albumId) => {
@@ -22,10 +22,8 @@ const useStorage = (file, albumId) => {
         setError(err);
       }, () => {
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-        const createdAt = serverTimestamp();
-        addDoc(collectionRef, { url, createdAt, albumId });
+        addDoc(collectionRef, { url, albumId });
         setUrl(url);
-       console.log('ran')
       });
     })
 

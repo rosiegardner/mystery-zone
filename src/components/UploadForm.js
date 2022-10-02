@@ -18,7 +18,6 @@ function UploadForm(props){
       setFile(null);
       setError('Please select an image file (png / jpeg)');
     }
-    console.log(props.albumId);
   }
   console.log(file);
   return (
