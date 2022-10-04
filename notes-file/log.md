@@ -136,3 +136,6 @@
 * 7:00: Import Framer-Motion for album and image styling
 * 8:00: Continue styling
 * 9:00: < end of day >
+
+# Tuesday 10/4
+* 1:30: Continue styling on styling branch
