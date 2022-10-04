@@ -24,7 +24,7 @@ const useFirestore = (albumId) => {
       return () => unSubscribe();
     
 
-  }, [])
+  }, [albumId])
 
   return { docs };
 }
