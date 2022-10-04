@@ -6,6 +6,7 @@ import EditAlbumForm from './EditAlbumForm';
 import { db } from '../.././firebase.js';
 import { collection, addDoc, doc, updateDoc, deleteDoc } from 'firebase/firestore';
 import { query, onSnapshot, serverTimestamp, orderBy} from 'firebase/firestore';
+import { motion } from 'framer-motion';
 
 function AlbumControl() {
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
@@ -99,19 +100,23 @@ function AlbumControl() {
       currentlyVisibleState = 
       <NewAlbumForm 
         newAlbum = {handleAddingNewAlbumToList} />;
-      buttonText = "Return to Album List"
+        buttonText = "Return to Album List"
     } else {
       currentlyVisibleState = 
       <AlbumList 
         albumList = {mainAlbumList}
         albumSelected = {handleChangingSelectedAlbum} />;
-      buttonText = "Add Album"
+        buttonText = "Add Album"
     }
 
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        {error ? null : <button onClick={handleClick}>{buttonText}</button>}
+        {error ? null : <motion.button
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          style={{ x: 100 }} 
+          onClick={handleClick}>{buttonText}</motion.button>}
       </React.Fragment>
     );
   

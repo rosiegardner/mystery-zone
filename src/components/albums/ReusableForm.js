@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 
 function ReusableForm(props) {
   return (
@@ -9,7 +10,11 @@ function ReusableForm(props) {
           type='text'
           name='name'
           placeholder='"Album 1"' />
-        <button type='submit'>{props.buttonText}</button>
+        <motion.button
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          style={{ x: 100 }}
+          type='submit'>{props.buttonText}</motion.button>
         </form>
     </React.Fragment>
   );

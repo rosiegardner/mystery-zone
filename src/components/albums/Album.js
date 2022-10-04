@@ -5,7 +5,7 @@ function Album(props) {
   return (
     <React.Fragment>
       <div onClick = {() => props.albumClicked(props.id)}>
-      <h1>Album</h1>
+      
       <h3>{props.name}</h3>
       <hr/>
       </div>

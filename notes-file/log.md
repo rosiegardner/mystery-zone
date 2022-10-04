@@ -135,3 +135,4 @@
 * 6:00: Continue styling
 * 7:00: Import Framer-Motion for album and image styling
 * 8:00: Continue styling
+* 9:00: < end of day >
