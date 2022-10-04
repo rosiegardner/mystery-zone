@@ -1,5 +1,5 @@
 ### Research & Planning Log
-## Total Hours Worked: 57hr & 35min ( 8/25/22 - 10/01/22 )
+## Total Hours Worked: 60hr & 35min ( 8/25/22 - 10/03/22 )
 
 #### August 2022 (08/25 - 08/26): 6hr & 40min
 
@@ -109,7 +109,7 @@
 * 1|2: ------
 * 3:30: < end >
 
-#### October 2022 (10/01 - 10/01 ) 14hrs & 15mins
+#### October 2022 (10/01 - 10/01 ) 17hrs & 15mins
 
 # Saturday 10/01
 
@@ -133,3 +133,9 @@
 * 3:30: create new branch 'router'
 * 4:00: research styling 
 * 5:00: < end for the day >
+
+# Monday 10/3
+* 6:00: Continue styling
+* 7:00: Import Framer-Motion for album and image styling
+* 8:00: Continue styling
+* 9:00: < end of day >
