@@ -7,6 +7,17 @@ import { db } from '../.././firebase.js';
 import { collection, addDoc, doc, updateDoc, deleteDoc } from 'firebase/firestore';
 import { query, onSnapshot, serverTimestamp, orderBy} from 'firebase/firestore';
 import { motion } from 'framer-motion';
+import styled from 'styled-components';
+
+const Button = styled.button`
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: 5px 0px;
+  cursor: pointer;
+`;
 
 function AlbumControl() {
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
@@ -112,11 +123,14 @@ function AlbumControl() {
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        {error ? null : <motion.button
+        {error ? null : 
+        <motion.button
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.8 }}
           style={{ x: 100 }} 
-          onClick={handleClick}>{buttonText}</motion.button>}
+          onClick={handleClick}>
+            <Button>{buttonText}</Button>
+          </motion.button>}
       </React.Fragment>
     );
   

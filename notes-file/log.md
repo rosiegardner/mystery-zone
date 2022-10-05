@@ -139,3 +139,7 @@
 
 # Tuesday 10/4
 * 1:30: Continue styling on styling branch
+* 2|3|4|5: ------ research more on framer - motion and styled components
+* 6:00: Start class - continue with framer-motion
+* 7:00: -----
+* 8:00: -----

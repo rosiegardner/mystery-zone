@@ -18,9 +18,7 @@ function AlbumList(props){
             key = {album.id} />
         </motion.div>
         )}
-
       </div>
-      <hr />
     </React.Fragment>
   );
 }
