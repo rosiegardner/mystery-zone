@@ -1,5 +1,5 @@
 ### Research & Planning Log
-## Total Hours Worked: 50hr & 35min ( 8/25/22 - 10/01/22 )
+## Total Hours Worked: 7hr & 35min ( 8/25/22 - 10/04/22 )
 
 #### August 2022 (08/25 - 08/26): 6hr & 40min
 
@@ -109,7 +109,7 @@
 * 1|2: ------
 * 3:30: < end >
 
-#### October 2022 (10/01 - 10/01 ) 7hrs & 15mins
+#### October 2022 (10/01 - 10/01 ) 14hrs & 45mins
 
 # Saturday 10/01
 
@@ -142,4 +142,5 @@
 * 2|3|4|5: ------ research more on framer - motion and styled components
 * 6:00: Start class - continue with framer-motion
 * 7:00: -----
-* 8:00: -----
+* 8:00: ----
+* 9:00: < end for day >
