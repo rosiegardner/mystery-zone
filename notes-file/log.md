@@ -1,5 +1,5 @@
 ### Research & Planning Log
-## Total Hours Worked: 68hr & 5min ( 8/25/22 - 10/04/22 )
+## Total Hours Worked: 73hr & 5min ( 8/25/22 - 10/06/22 )
 
 #### August 2022 (08/25 - 08/26): 6hr & 40min
 
@@ -55,8 +55,8 @@
 # Friday 9/16
 * 2:55: < Research for BUGFIX in Firebase >
 * 5:30: Stop useEffect Hook re-render multiple times tutorial 
-`https://www.youtube.com/watch?v=KzH6YxW0zW4`
-`https://www.youtube.com/watch?v=81faZzp18NM`
+* `https://www.youtube.com/watch?v=KzH6YxW0zW4`
+* `https://www.youtube.com/watch?v=81faZzp18NM`
 * 6:40: < Further exploration needed >
 
 # Sunday 9/18
@@ -66,7 +66,7 @@
 
 # Thursday 9/22
 * 4:00: Watch tutorial "Subcollections in Firebase/Firestore v9 with React.js"
-`https://www.youtube.com/watch?v=gm-bggVJb5k`
+* `https://www.youtube.com/watch?v=gm-bggVJb5k`
 * 4:30: create new branch to albums"
 * 5:00: < further exploration needed >
 
@@ -109,7 +109,7 @@
 * 1|2: ------
 * 3:30: < end >
 
-#### October 2022 (10/01 - 10/04 ) 24hrs & 45mins
+#### October 2022 (10/01 - 10/04 ) 29hrs & 45mins
 
 # Saturday 10/01
 
@@ -147,3 +147,16 @@
 * 7:00: -----
 * 8:00: ----
 * 9:00: < end for day >
+
+# Wednesday 10/5
+* 6:00: Start class - build along tutorial with framer-motion
+* `https://www.youtube.com/playlist?list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i`
+* 7:00: continue with tutorial
+* 8:00: --------
+* 9:00: < end for day >
+
+# Thurday 10/6
+* 12:00: Continue with framer-motion tutorial
+* 1:00: ----
+* 2:00 - finish tutorial / build along -
+* `https://github.com/rosiegardner/pizza_motion.git`
