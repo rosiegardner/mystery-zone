@@ -159,4 +159,4 @@
 * 12:00: Continue with framer-motion tutorial
 * 1:00: ----
 * 2:00 - finish tutorial / build along -
-* `https://github.com/rosiegardner/pizza_motion.git`
+* GH-Repository: `https://github.com/rosiegardner/pizza_motion.git`
