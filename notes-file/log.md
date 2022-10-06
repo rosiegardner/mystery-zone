@@ -160,4 +160,4 @@
 * 1:00: ----
 * 2:00 - finish tutorial / build along -
 * GH-Repository: `https://github.com/rosiegardner/pizza_motion.git`
-* 2:30: create new branch 'styling 2' - created
+* 2:30: create new branch 'styles2' - created
