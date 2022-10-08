@@ -1,36 +1,49 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import styled, { css } from 'styled-components';
+import styled from "styled-components";
 
-const Button = styled.button`
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  padding: 8px 50px;
-  border-radius: 5px;
-  margin: 5px 0px;
-  cursor: pointer;
-
-  ${props => props.primary && css`
-    background: palevioletred;
-    color: white;
-  `}
+const Input = styled.input`
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
+  background: papayawhip;
+  border: none;
+  border-radius: 3px;
+  ::placeholder {
+    color: palevioletred;
+  }
 `;
+
+const buttonVariants = {
+  hover: {
+    scale: 1.1, 
+    textShadow: "0px 0px 8px rgb(255,255,255)",
+    boxShadow: "0px 0px 8px rgb(255,255,255)",
+    transition: {
+      duration: 0.4,
+    }
+  }
+}
 
 function ReusableForm(props) {
   return (
     <React.Fragment>
       <form onSubmit = {props.formSubmissionHandler}>
-        <input 
+        <Input 
           type='text'
           name='name'
-          placeholder='"Album 1"' />
-        <motion.button
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.8 }}
-          style={{ x: 100 }}
-          type='submit'><Button>{props.buttonText}</Button></motion.button>
+          placeholder='ex: "album1"' />
+        <br></br>
+        <Input 
+          type='text'
+          year='years'
+          placeholder='ex: "2015-2018"'/>
+        <br></br>
+        <motion.button 
+          variants={buttonVariants}
+          whileHover="hover"
+          type='submit'>{props.buttonText}</motion.button>
         </form>
     </React.Fragment>
   );

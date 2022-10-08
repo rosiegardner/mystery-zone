@@ -14,6 +14,7 @@ function AlbumList(props){
           <Album 
             albumClicked = { props.albumSelected }
             name = {album.name}
+            year = {album.year}
             id = {album.id}
             key = {album.id} />
         </motion.div>

@@ -1,12 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+
 const Modal = ({ selectedImage, setSelectedImage }) => {
+
   const handleClick = (e) => {
     if (e.target.classList.contains('backdrop')) {
       setSelectedImage(null);
     }
   }
+
   return (
     <motion.div className="backdrop" 
       onClick={handleClick} 
@@ -22,3 +25,6 @@ const Modal = ({ selectedImage, setSelectedImage }) => {
 }
 
 export default Modal; 
+
+
+

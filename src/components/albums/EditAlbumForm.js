@@ -9,6 +9,7 @@ function EditAlbumForm(props) {
     event.preventDefault();
     props.editAlbumClick({
       name: event.target.name.value,
+      year: event.target.year.value,
       id: album.id
     });
   }

@@ -7,17 +7,18 @@ import { db } from '../.././firebase.js';
 import { collection, addDoc, doc, updateDoc, deleteDoc } from 'firebase/firestore';
 import { query, onSnapshot, serverTimestamp, orderBy} from 'firebase/firestore';
 import { motion } from 'framer-motion';
-import styled from 'styled-components';
 
-const Button = styled.button`
-  background-color: black;
-  color: white;
-  font-size: 15px;
-  padding: 5px 20px;
-  border-radius: 5px;
-  margin: 5px 0px;
-  cursor: pointer;
-`;
+const buttonVariants = {
+  hover: {
+    scale: 1.1, 
+    textShadow: "0px 0px 8px rgb(255,255,255)",
+    boxShadow: "0px 0px 8px rgb(255,255,255)",
+    transition: {
+      duration: 0.4
+    }
+  }
+}
+
 
 function AlbumControl() {
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
@@ -29,7 +30,7 @@ function AlbumControl() {
   useEffect(() => {
     const collectionTimestamp = query(
       collection(db, "albums"),
-      orderBy('createdAt', 'desc')
+      orderBy('createdAt')
     );
 
     const unSubscribe = onSnapshot(
@@ -124,13 +125,10 @@ function AlbumControl() {
       <React.Fragment>
         {currentlyVisibleState}
         {error ? null : 
-        <motion.button
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.8 }}
-          style={{ x: 100 }} 
-          onClick={handleClick}>
-            <Button>{buttonText}</Button>
-          </motion.button>}
+          <motion.button 
+            variants={buttonVariants}
+            whileHover="hover"
+            onClick={handleClick}>{buttonText}</motion.button>}
       </React.Fragment>
     );
   
