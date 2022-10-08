@@ -1,5 +1,5 @@
 ### Research & Planning Log
-## Total Hours Worked: 73hr & 5min ( 8/25/22 - 10/06/22 )
+## Total Hours Worked: 87hr & 5min ( 8/25/22 - 10/08/22 )
 
 #### August 2022 (08/25 - 08/26): 6hr & 40min
 
@@ -109,7 +109,7 @@
 * 1|2: ------
 * 3:30: < end >
 
-#### October 2022 (10/01 - 10/04 ) 29hrs & 45mins
+#### October 2022 (10/01 - 10/06 ) 43hrs & 45mins
 
 # Saturday 10/01
 
@@ -160,3 +160,12 @@
 * 1:00: ----
 * 2:00 - finish tutorial / build along -
 * GH-Repository: `https://github.com/rosiegardner/pizza_motion.git`
+* 2:30: create new branch 'styles2' - created
+* 3:00-8:00: - messed around with styling / framer-motiion.
+* 8:00: < end for day >
+
+# Saturday 10/8
+
+* 9:00: Continue with styling
+* 10:00-2:30: reseach how to build a carousel
+* 3:00: < end for work >
