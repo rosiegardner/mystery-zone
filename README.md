@@ -3,7 +3,7 @@
 #### By: Rosie Gardner
 
 ## Description
-This application allows users to upload png or jpeg files from personal device. Serving as a Research and Planning log with a capstone propsoal for final project at Epicodus.
+Doom Town PDX - Photo Gallery is a responsive image gallery built in React that will allow users to look through the lens of a local artist known as ‘CC.’ Diving into Portland’s Underground community, bands, and the events that have transpired over the years - pre and post-pandemic. Though currently in production, it will serve as an online portfolio for the artist in real-world development.
 
 ### Technologies Used
 
@@ -12,6 +12,7 @@ This application allows users to upload png or jpeg files from personal device. 
 * HTML/CSS
 * Firebase / Firestore
 * Git
+* Framer Motion (styles2 - branch)
 
 
 ### Setup/Installation Requirements
@@ -28,7 +29,9 @@ This application allows users to upload png or jpeg files from personal device. 
 
 ### Known Bugs
 
-* NO KNOWN BUGS
+* NO KNOWN BUGS - on main branch and styles2
+* This application is still in production *
+
 ### Contact
 
 * Rosie Gardner <rosiegardner78@gmail.com>
@@ -37,4 +40,4 @@ This application allows users to upload png or jpeg files from personal device. 
 
 MIT
 
-Copyright (c) Sept. 2022 
+Copyright (c) Oct. 2022 
