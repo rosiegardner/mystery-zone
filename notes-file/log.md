@@ -1,5 +1,5 @@
 ### Research & Planning Log
-## Total Hours Worked: 87hr & 5min ( 8/25/22 - 10/08/22 )
+## Total Hours Worked: 88hr & 50min ( 8/25/22 - 10/08/22 )
 
 #### August 2022 (08/25 - 08/26): 6hr & 40min
 
@@ -109,7 +109,7 @@
 * 1|2: ------
 * 3:30: < end >
 
-#### October 2022 (10/01 - 10/06 ) 43hrs & 45mins
+#### October 2022 (10/01 - 10/08 ) 45hrs & 30mins
 
 # Saturday 10/01
 
@@ -169,3 +169,6 @@
 * 9:00: Continue with styling
 * 10:00-2:30: reseach how to build a carousel
 * 3:00: < end for work >
+* -----------
+* 9:30: Continue with styling / cleaning up
+* 11:15: Prep for merge with main
