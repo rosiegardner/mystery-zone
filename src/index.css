@@ -10,7 +10,8 @@
 body{
   font-family: "Noto Serif";
   background: rgb(100,0,123);
-  background: radial-gradient(circle, rgba(188, 153, 209) 0%, rgba(10, 9, 11) 100%);
+  background: radial-gradient(circle, rgba(188, 153, 209) 20%, rgba(10, 9, 11) 100%);
+  overflow: hidden;
 }
 .App{
   max-width: 960px;
