@@ -3,7 +3,18 @@ import PropTypes from 'prop-types';
 import UploadForm from '.././images/UploadForm';
 import ImageGrid from '.././images/ImageGrid';
 import Modal from '.././images/Modal';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+
+const buttonVariants = {
+  hover: {
+    scale: 1.1, 
+    textShadow: "0px 0px 8px rgb(255,255,255)",
+    boxShadow: "0px 0px 8px rgb(255,255,255)",
+    transition: {
+      duration: 0.4
+    }
+  }
+}
 
 
 function AlbumDetail(props){
@@ -18,8 +29,14 @@ function AlbumDetail(props){
       <UploadForm albumId={album.id} />
       <ImageGrid setSelectedImage={setSelectedImage} albumId={album.id} />
       { selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} /> }
-      <button onClick = { props.albumEdit }>Update Album</button> 
-      <button onClick = {() => albumDelete(album.id) }>Delete Album</button>
+      <motion.button
+        variants={buttonVariants}
+        whileHover="hover"
+        onClick = { props.albumEdit }>Update Album</motion.button> 
+      <motion.button
+        variants={buttonVariants}
+        whileHover="hover"
+        onClick = {() => albumDelete(album.id) }>Delete Album</motion.button>
         <hr/>
     </React.Fragment>
   );
