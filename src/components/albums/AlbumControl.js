@@ -51,7 +51,7 @@ function AlbumControl() {
       }
     );
     return () => unSubscribe();
-  }, []);
+  }, [mainAlbumList]);
 
 
   const handleClick = () => {

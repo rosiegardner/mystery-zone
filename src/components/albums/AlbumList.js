@@ -9,6 +9,7 @@ function AlbumList(props){
       <div className="album-grid">
         {props.albumList.map((album) => 
         <motion.div className="album-wrap"
+          key={album.id}
           layout
           whileHover={{ opacity: 1 }}>
           <Album 
