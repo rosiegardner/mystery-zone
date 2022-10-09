@@ -10,7 +10,7 @@ function NewAlbumForm(props){
     event.preventDefault();
     props.newAlbum({
       name: event.target.name.value,
-      year: parseInt(event.target.year.value),
+      year: event.target.year.value,
       createdAt: serverTimestamp(),
     });
   }

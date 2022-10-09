@@ -18,7 +18,7 @@ function Album(props) {
 
 Album.propTypes = {
   name: PropTypes.string,
-  year: PropTypes.number,
+  year: PropTypes.string,
   id: PropTypes.string,
   albumClicked: PropTypes.func
 };
