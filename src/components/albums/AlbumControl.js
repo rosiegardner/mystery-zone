@@ -39,7 +39,8 @@ function AlbumControl() {
         const albums = [];
         collectionSnapshot.forEach((doc) => {
           albums.push({
-            ...doc.data(), id: doc.id
+            ...doc.data(),
+            id: doc.id
           });
         });
         const createdAt = serverTimestamp()

@@ -27,7 +27,6 @@ function AlbumList(props){
 AlbumList.propTypes = {
   albumList: PropTypes.array,
   albumSelected: PropTypes.func
-
 };
 
 export default AlbumList;

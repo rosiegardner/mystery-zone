@@ -30,15 +30,17 @@ function ReusableForm(props) {
   return (
     <React.Fragment>
       <form onSubmit = {props.formSubmissionHandler}>
+        <p>Album Name: 
         <Input 
           type='text'
           name='name'
-          placeholder='ex: "album1"' />
+          placeholder='ex: "album1"' /> 
         <br></br>
-        <Input 
+       Life Span:
+        <Input
           type='text'
-          year='years'
-          placeholder='ex: "2015-2018"'/>
+          name='year'
+          placeholder='ex: "2015-2018"'/> </p>
         <br></br>
         <motion.button 
           variants={buttonVariants}
