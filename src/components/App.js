@@ -1,7 +1,8 @@
 import React from "react";
 import Intro from "./Intro";
 import Header from "./Header";
-import AlbumControl from './albums/AlbumControl';
+// import AlbumControl from './albums/AlbumControl';
+import AlbumList from './albums/AlbumList';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -12,9 +13,9 @@ function App() {
       <Router>
         <Header/>
         <Routes>
-          <Route path="/welcome" element={<Intro />} />
+          <Route path="/" element={<Intro />} />
           
-          <Route path="/" element={<AlbumControl />}/>
+          <Route path="/albums" element={<AlbumList />}/>
           
 
         </Routes>

@@ -1,7 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Intro() {
+  const navigate = useNavigate ();
+
+  const handleIntro = () => {
+    navigate("/albums")
+  }
   return (
     <React.Fragment>
       <div className="intro">
@@ -16,7 +21,7 @@ function Intro() {
           Capturing the intensity of a hard hitting band, the glamour of a Hyena out in the town,
           the monstrous exaggeration of a Queen or Club Kid, down to the culture and things in my lovely city of Portland is what keeps me shooting.  
           Enjoy, much love -CC</p>
-        <Link to="/">Enter</Link>
+        <button onClick={handleIntro}>Enter!</button>
       </div>
     </React.Fragment>
   )
