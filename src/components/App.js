@@ -1,17 +1,28 @@
 import React from "react";
+import Intro from "./Intro";
 import Header from "./Header";
-import Home from './Home';
 import AlbumControl from './albums/AlbumControl';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   
   return (
     <div className="App">
-      <Header/>
-      <Home/>
-      <AlbumControl/>
-    </div>
-  );
-}
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path="/welcome" element={<Intro />} />
+          
+          <Route path="/" element={<AlbumControl />}/>
+          
+
+        </Routes>
+
+      </Router>
+      
+      </div>
+      );
+    }
 
 export default App;
