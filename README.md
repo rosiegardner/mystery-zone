@@ -23,6 +23,8 @@ This application allows users to upload png or jpeg files from personal device. 
 * Read `log.md`
 * In terminal run:
 * `npm install`
+* `git pull`
+* `git checkout origin/styles2`
 * `npm run start`
 
 
